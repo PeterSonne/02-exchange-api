@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const port = 8001;
 const axios = require("axios");
+const cors = require("cors");
 
+app.use(cors({ credentials: true }));
 app.get("/", (req, res) => {
   res.send("Good Morning");
 });
