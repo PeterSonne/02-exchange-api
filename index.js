@@ -7,11 +7,24 @@ app.get("/", (req, res) => {
   res.send("Good Morning");
 });
 
-app.get("/currency", (req, res) => {
+app.get("/currency", (req, res, amt) => {
+  // tmp
+  amt = 101;
+  const targetCurrency = "AUD";
+  const baseCurrency = "EUR";
+
   axios
-    .get("https://api.exchangeratesapi.io/latest?base=EUR&symbols=USD")
+    .get(
+      `https://api.exchangeratesapi.io/latest?base=${baseCurrency}&symbols=${targetCurrency}`
+    )
     .then(response => {
-      res.send(response.data);
+      if (response.data) {
+        res.send({
+          amt: Number((amt * response.data.rates[targetCurrency]).toFixed(2))
+        });
+      } else {
+        res.send("Error getting data");
+      }
     })
     .catch(err => {
       res.send(err);
