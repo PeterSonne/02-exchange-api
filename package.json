@@ -1,0 +1,19 @@
+{
+  "name": "exchange-api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PeterSonne/02-exchange-api.git"
+  },
+  "author": "Peter Sonne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PeterSonne/02-exchange-api/issues"
+  },
+  "homepage": "https://github.com/PeterSonne/02-exchange-api#readme"
+}
