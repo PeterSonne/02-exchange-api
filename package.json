@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/PeterSonne/02-exchange-api/issues"
   },
-  "homepage": "https://github.com/PeterSonne/02-exchange-api#readme"
+  "homepage": "https://github.com/PeterSonne/02-exchange-api#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
